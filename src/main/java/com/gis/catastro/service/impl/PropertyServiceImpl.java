@@ -13,7 +13,7 @@ public class PropertyServiceImpl implements PropertyService {
     private PropertyRepository propertyRepository;
     @Override
     public Property getPredioByGeocodigo(String pGeocodigo) {
-        Property vProperty = propertyRepository.getPropertyByGeocodigo(pGeocodigo).orElse(null);
+        Property vProperty = (Property) propertyRepository.getPropertyByGeocodigo(pGeocodigo).orElse(null);
         return vProperty;
     }
 }

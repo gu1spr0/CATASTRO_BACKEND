@@ -36,7 +36,7 @@ public class Property implements Serializable {
     @NotNull(message = "El codigo fid no puedo ser nulo")
     @ApiModelProperty(notes = "Contiene el codigo fid del predio")
     @Column(name = "target_fid")
-    private Long target_fid;
+    private Long targetFid;
 
     @NotNull(message = "El campo referencia no puedo ser nulo")
     @ApiModelProperty(notes = "Contiene el campo referencia del predio")

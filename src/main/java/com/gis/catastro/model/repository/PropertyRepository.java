@@ -11,6 +11,7 @@ import java.util.Optional;
 @Repository
 @Qualifier("PropertyRepository")
 public interface PropertyRepository extends CrudRepository<Property, Long> {
-    @Query(value = "select p as geometria from Property p where p.geocodigo=?1")
+    @Query(value = "select \"GEOCODIGO\", st_transform(geom, 4326) as geom, objectid, join_count, target_fid, referencia, est_gabine, referenc_1, n_grilla, contador, geocodigo, shape_leng, shape_area from \"v_Predios\" where geocodigo =:pGeocodigo", nativeQuery = true)
     Optional<Property> getPropertyByGeocodigo(String pGeocodigo);
+
 }
