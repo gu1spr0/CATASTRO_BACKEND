@@ -2,7 +2,7 @@ package com.gis.catastro.controller;
 
 import com.gis.catastro.model.entity.Property;
 import com.gis.catastro.service.PropertyService;
-import com.gis.catastro.service.dto.domainValue.DomainValueQueryPageableDto;
+import com.gis.catastro.service.dto.property.PropertyQueryDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
